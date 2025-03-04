@@ -18,7 +18,7 @@ const WeeklyMatches = () => {
           },
         });
         if (!response.ok) {
-          throw new Error("Failed to fetch matches");
+          throw new Error("Failed this to fetch matches");
         }
         const data = await response.json();
         if (data.matches) {
