@@ -1,0 +1,42 @@
+import React, { useEffect, useState } from "react";
+
+
+const UnitedMatches = ({matches})=>{
+    return(
+        <>
+        <div className="allUnited">
+        
+            <h3 > Manchester United six games</h3>
+        
+        
+        {matches.length > 0 ? (
+        <ul>
+          {matches.map((match, index) => (
+            <li className="weekU" key={index}>
+                <div className="allU">
+                    <div className="teamsU">
+                        <img src={match.homeTeam.crest} alt="home team flag" /><p>{match.homeTeam.tla}</p> 
+                    </div>
+                    <div className="teamsU"><p>vs</p></div>
+                    <div className="teamsU">
+                       <img src={match.awayTeam.crest} alt="away team flag"/><p>{match.awayTeam.tla}</p>
+                    </div> 
+                    
+                </div>
+                <div className="dates">
+                <p> Date:{new Date(match.utcDate).toLocaleDateString()}</p>
+                <p>Time:{new Date(match.utcDate).toLocaleTimeString()}</p>
+                </div>
+            </li>
+            
+          ))}
+        </ul>
+      ) : (
+        <p>No matches found.</p>
+      )}
+        </div>
+        </>
+    )
+
+};
+export default UnitedMatches;

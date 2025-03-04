@@ -1,0 +1,196 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  
+  
+  background: linear-gradient(-45deg, #37003c, #6a1b9a, #9c27b0, #e91e63);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Header styling */
+.head {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-top: 10px;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+h1:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons container */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.custom-button {
+  border: 2px solid;
+  width: 150px;
+  height: 35px;
+  margin-bottom: 10px;
+  border-color: black;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.custom-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.bmanutd:focus {
+  background-color: #DA291C;
+  border-radius: 20px;
+}
+
+.bcity:focus {
+  background-color: #436c97;
+  border-radius: 20px;
+}
+
+.bchamp:focus {
+  background-color: #0a1596;
+  border-radius: 20px;
+}
+
+/* Weekly matches container */
+.weekly-match {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+}
+
+.week, .weekU {
+  border: 2px solid;
+  border-radius: 10px;
+  border-color: #f8e9e9;
+  height: auto;
+  width: 300px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.week:hover, .weekU:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.all, .allU {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.teams, .teamsU {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 5px;
+}
+
+.teams img, .teamsU img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.teams img:hover, .teamsU img:hover {
+  transform: scale(1.1);
+}
+
+.teams p, .teamsU p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.dates {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.dates p {
+  color: #E0E0E0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+
+.allUnited {
+  background: linear-gradient(135deg, #DA291C, #000000);
+  border-radius: 10px;
+}
+
+.allcity {
+  background: linear-gradient(135deg, #6CB0F7, #1E3A8A);
+  border-radius: 10px;
+}
+
+.allChampions {
+  background: linear-gradient(135deg, #1A237E, #4A148C);
+  border-radius: 10px;
+}
